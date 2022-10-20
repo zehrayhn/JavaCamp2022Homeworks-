@@ -1,9 +1,10 @@
 package ThirdWeek.homework3.business;
 
 import java.util.ArrayList;
-
+import java.util.Iterator;
 import java.util.List;
 
+import ThirdWeek.homework3.core.logging.Logger;
 import ThirdWeek.homework3.dataAccess.CategoryDao;
 import ThirdWeek.homework3.entities.Category;
 
@@ -11,9 +12,9 @@ import ThirdWeek.homework3.entities.Category;
 public class CategoryManager {
 
 	private CategoryDao categoryDao;
-	
-	public CategoryManager(CategoryDao categoryDao) {
-		
+	private Logger[] loggers;
+	public CategoryManager(CategoryDao categoryDao, Logger[] loggers) {
+		this.loggers=loggers;
 		this.categoryDao = categoryDao;
 	}
 
@@ -32,6 +33,10 @@ public class CategoryManager {
 		categoryList.add(category);
         categoryDao.add(category);
         System.out.println("Kategori eklendi");
+        
+        for (Logger logger:loggers) {
+			logger.log(category.getName());
+		}
 	}
 	
 	 public void list()

@@ -4,5 +4,5 @@ import ThirdWeek.homework3.entities.Category;
 
 public interface CategoryDao {
 
-	public void add(Category category);
+	 void add(Category category);
 }

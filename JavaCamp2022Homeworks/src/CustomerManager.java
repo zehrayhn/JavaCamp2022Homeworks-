@@ -1,4 +1,5 @@
 
+
 public class CustomerManager {
 	private Customer _customer;
 	private ICreditManager _creditManager;

@@ -1,3 +1,4 @@
+
 public class CreditManager {
 
 	public void Calculate() {

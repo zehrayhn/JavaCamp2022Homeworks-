@@ -4,5 +4,5 @@ import ThirdWeek.homework3.entities.Course;
 
 public interface CourseDao {
 
-	public void add(Course course);
+	 void add(Course course);
 }

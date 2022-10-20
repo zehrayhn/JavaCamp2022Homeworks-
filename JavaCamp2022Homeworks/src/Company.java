@@ -1,4 +1,5 @@
 
+
 public class Company extends Customer{
 
 	private String taxNumber;
